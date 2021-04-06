@@ -1,6 +1,5 @@
 
 
-
 file_name=Main
 make $file_name
 
