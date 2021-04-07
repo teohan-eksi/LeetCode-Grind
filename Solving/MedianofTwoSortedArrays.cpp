@@ -69,7 +69,7 @@ public:
 					nextElem = nums1.at(i);	
 				}else{
 					nextElem = nums2.at(k);
-					k++;//!!!
+					k++;
 				}
 				
 				if(k < nums2.size()){
