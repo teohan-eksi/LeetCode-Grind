@@ -60,8 +60,37 @@ public:
 			return 0;
 		}else{
 			//sort them and find the median of the sorted list.
+			int i = 0;
+			int k = 0;
+			int nextElem;
+			vector<int> nums;
+			while(true){
+				if(i < nums1.size()){
+					nextElem = nums1.at(i);	
+				}else{
+					nextElem = nums2.at(k);
+					k++;//!!!
+				}
 				
-			return ???;
+				if(k < nums2.size()){
+					if(nextElem < nums2.at(k)){
+						i++;		
+					}else{
+						nextElem = nums2.at(k);
+						k++;
+					}
+				}else{
+					i++;
+				}
+				
+				nums.push_back(nextElem);
+				cout<<nextElem<<"\n";	
+				if(i >= nums1.size() && k >= nums2.size()){
+					break;	
+				}
+			}
+				
+			return findMedian(nums);
 		}
     }
 
@@ -81,7 +110,7 @@ int main(){
 	Solution sol;
 
 	vector<int> nums1{1,3};
-	vector<int> nums2{2,7};
+	vector<int> nums2{2};
 	
 	cout<<sol.findMedianSortedArrays(nums1, nums2)<<"\n";
 	return 0;
