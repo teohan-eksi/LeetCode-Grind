@@ -36,7 +36,6 @@ class Solution:
         return sx
 
 sol = Solution()
-
 testIOMap = [[0, 0], [1,1], [2,1], [3,1], [4,2], [8,2], [10,3], [36,6], [254289018, 15946]]
 
 for test in testIOMap:
