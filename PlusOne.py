@@ -27,7 +27,6 @@ class Solution:
         return res
 
 sol = Solution()
-
 testCases = [[0], [9], [1,9], [9, 9], [9,0,9], [9,1,0,9,9]]
 
 for testCase in testCases:
